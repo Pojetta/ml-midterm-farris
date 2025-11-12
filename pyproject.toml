@@ -42,6 +42,7 @@ Repository = "https://github.com/denisecase/applied-ml-template"
 dev = [
   "pytest", # run some tests automatically only needed for code files
   "pytest-cov", # coverage report for more visibility only needed for code files
+  "pre-commit",  # runs checks automatically on each commit
 ]
 docs = [
   "mkdocs",                # Core MkDocs
