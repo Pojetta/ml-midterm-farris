@@ -170,4 +170,4 @@ git push
 
 Optional: Click the **Actions** tab to watch the build process in real time. Click the **Code** tab to return.
 
-After the actions complete, your documentation site should be available at <https://YOUR_GITHUB_USERNAME.github.io/your-repository-name/>.
+After the actions complete, your documentation site should be available at <https://pojetta.github.io/ml-midterm-farris/>.
