@@ -6,11 +6,11 @@
 # TODO: Update site_description
 # TODO: Update site_author
 
-site_name: Applied ML Project
-site_url: https://denisecase.github.io/applied-ml-template/
-repo_url: https://github.com/denisecase/applied-ml-template
-site_description: Professional applied ML project
-site_author: Denise Case
+site_name: Applied ML Midterm
+site_url: https://pojetta.github.io/ml-midterm-farris/
+repo_url: https://github.com/pojetta/ml-midterm-farris
+site_description: Midterm Project--Classification Analysis
+site_author: Joanna Farris
 docs_dir: docs
 site_dir: site
 
