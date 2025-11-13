@@ -64,6 +64,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - About the Dataset: about_dataset.md
   - Midterm:
       - Overview: midterm/README.md
       - Analysis: midterm/ANALYSIS.md

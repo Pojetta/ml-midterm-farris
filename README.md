@@ -1,183 +1,133 @@
-# applied-ml-template
+# 💸 Banknote Authentication Classification  
+**Author:** Joanna Farris  
+**Date:** November 12, 2025  
 
-> Use this repo to start a professional Python project.
+## Project Overview  
+This project applies **machine learning classification techniques** to determine whether a banknote is **authentic or forged** using features extracted from scanned images.  
 
-- Additional instructions: See the [pro-analytics-02](https://denisecase.github.io/pro-analytics-02/) guide.
-- Project organization: [STRUCTURE](./STRUCTURE.md)
-- Build professional skills:
-  - **Environment Management**: Every project in isolation
-  - **Code Quality**: Automated checks for fewer bugs
-  - **Documentation**: Use modern project documentation tools
-  - **Testing**: Prove your code works
-  - **Version Control**: Collaborate professionally
+📄 **Project Files:**  
+- 👉 [Midterm Notebook](notebook/midterm-farris.ipynb)  
+- 👉 [Peer Review](peer_review.md)
 
----
+The dataset used is the **UCI Banknote Authentication Dataset**, where each banknote image was transformed with a **wavelet transform**, and four statistical measures were computed:  
+- **Variance**  
+- **Skewness**  
+- **Kurtosis**  
+- **Entropy**
 
-## About this Repository
-
-Starter files for the example labs:
-
-- notebooks/example01 folder
-- notebooks/example02 folder
-
-## Folders for Projects
-
-Each project will be completed in its own folder.
-
-- notebooks/project01 folder:
-  - ml01.ipynb - COMPLETE THIS
-  - ml01.py - working script with just the code
-  - README.md - instructions - modify this to present your lab project
+The goal of this analysis was to explore the data, visualize feature distributions, build predictive models, and compare their performance.
 
 ---
 
-## WORKFLOW 1. Set Up Machine
-
-Proper setup is critical.
-Complete each step in the following guide and verify carefully.
-
-- [SET UP MACHINE](./SET_UP_MACHINE.md)
+## Dataset Details  
+- **Source:** UCI Machine Learning Repository  
+- **Instances:** 1,372 banknotes  
+- **Features:** 4 numeric features derived from wavelet-transformed images  
+- **Target Variable:**  
+  - `class` → 0 = forged, 1 = authentic  
+- **Missing Values:** None (dataset is already clean)
 
 ---
 
-## WORKFLOW 2. Set Up Project
+## Data Preparation  
+1. Loaded the dataset and verified structure, feature types, and missing values.  
+2. Created histograms and boxplots for each feature to visualize distribution shape and potential outliers.  
+3. Confirmed the target variable (`class`) is **balanced**, with nearly equal authentic and forged notes.  
+4. Split the dataset into training and testing sets (80/20).  
+5. Assigned the four numerical features to `X` and the target class to `y`.
 
-After verifying your machine is set up, set up a new Python project by copying this template.
-Complete each step in the following guide.
+---
 
-- [SET UP PROJECT](./SET_UP_PROJECT.md)
+## Exploratory Data Analysis  
+- **Histograms** and **boxplots** showed that all four features vary meaningfully between authentic and forged notes.  
+- **Skewness** and **kurtosis** in particular exhibit clear separation patterns between classes.  
+- No anomalies or missing values were detected, and no preprocessing beyond visualization was required.  
+- The balanced target distribution supports strong model training without adjustments.
 
-It includes the critical commands to set up your local environment (and activate it):
+---
 
-```shell
+## Modeling and Evaluation  
+Two classification models were implemented and compared:
+
+| Model | Accuracy | Key Notes |
+|-------|:--------:|-----------|
+| **Logistic Regression** | 100% | Performs extremely well due to highly separable numeric features |
+| **Decision Tree** | 99% | Also performs well; easy to interpret and visualize |
+
+**Evaluation Metrics Used:**  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
+- Classification Reports (train and test)
+
+### Decision Tree Visualization  
+A fully customized, color-coded decision tree was created for interpretability:
+
+![Decision Tree](notebook/data/pretty_tree.png)
+
+---
+
+## Key Findings  
+- The dataset is **nearly linearly separable**, which is ideal for Logistic Regression.  
+- All four features contribute meaningful information — no single feature dominates on its own.  
+- Logistic Regression achieved **perfect generalization** on the test set.  
+- The Decision Tree correctly modeled most cases but was slightly less stable than the linear model.
+
+---
+
+## Tools and Libraries  
+- Python  
+- pandas, numpy  
+- matplotlib, seaborn  
+- scikit-learn (LogisticRegression, DecisionTreeClassifier, metrics)  
+- graphviz (for custom tree visualization)
+
+---
+
+## Reflections  
+- **Challenges:**  
+  - Understanding how wavelet-transformed images lead to statistical features  
+  - Interpreting kurtosis and skewness in the context of real classification  
+  - Tweaking visualizations and customizing the decision tree formatting  
+
+- **Insights:**  
+  - Even a small number of well-engineered features can completely separate two classes  
+  - Simple models can outperform more complex ones when the data is clean and structured  
+  - Visualizations (histograms, boxplots, and trees) added clarity to the decision-making process  
+
+- **Next Steps:**  
+  - Try Support Vector Machines or Random Forest for comparison  
+  - Explore scaling and PCA even though this dataset doesn’t require it  
+  - Investigate feature importance scores and decision boundaries
+
+---
+
+## Conclusion  
+This project demonstrates the complete classification workflow — from exploration and visualization to modeling and evaluation.  
+
+The outstanding performance of both models shows how effective statistical features from wavelet-transformed images can be for detecting counterfeit banknotes.  
+
+Logistic Regression emerged as the best model due to its perfect accuracy and ability to generalize cleanly from limited features.
+
+---
+
+## Model Summary
+
+| Model Type            | Features Used                          | Accuracy | Precision | Recall | F1-Score | Notes |
+|----------------------|-----------------------------------------|:--------:|:--------:|:------:|:--------:|-------|
+| Logistic Regression  | variance, skewness, kurtosis, entropy  | 1.00     | 1.00     | 1.00   | 1.00     | Simple, stable, and ideal for linearly separable data |
+| Decision Tree        | variance, skewness, kurtosis, entropy  | 0.99     | 0.99     | 0.99   | 0.99     | Interpretable; performs nearly as well as logistic regression |
+
+---
+
+## Setup Virtual Environment
+
+```bash
 uv venv
 uv python pin 3.12
 uv sync --extra dev --extra docs --upgrade
-uv run pre-commit install
+source .venv/bin/activate   # (Mac)
+uv add --dev pre-commit ruff
 uv run python --version
-```
-
-**Windows (PowerShell):**
-
-```shell
-.\.venv\Scripts\activate
-```
-
-**macOS / Linux / WSL:**
-
-```shell
-source .venv/bin/activate
-```
-
----
-
-## WORKFLOW 3. Daily Workflow
-
-Please ensure that the prior steps have been verified before continuing.
-When working on a project, we open just that project in VS Code.
-
-### 3.1 Git Pull from GitHub
-
-Always start with `git pull` to check for any changes made to the GitHub repo.
-
-```shell
-git pull
-```
-
-### 3.2 Run Checks as You Work
-
-This mirrors real work where we typically:
-
-1. Update dependencies (for security and compatibility).
-2. Clean unused cached packages to free space.
-3. Use `git add .` to stage all changes.
-4. Run ruff and fix minor issues.
-5. Update pre-commit periodically.
-6. Run pre-commit quality checks on all code files (**twice if needed**, the first pass may fix things).
-7. Run tests.
-
-In VS Code, open your repository, then open a terminal (Terminal / New Terminal) and run the following commands one at a time to check the code.
-
-```shell
-git pull
-uv sync --extra dev --extra docs --upgrade
-uv cache clean
-git add .
-uvx ruff check --fix
-uvx pre-commit autoupdate
-uv run pre-commit run --all-files
-git add .
-uv run pytest
-```
-
-NOTE: The second `git add .` ensures any automatic fixes made by Ruff or pre-commit are included before testing or committing.
-Running `uv run pre-commit run --all-files` twice may be helpful if the first time doesn't pass. 
-
-<details>
-<summary>Click to see a note on best practices</summary>
-
-`uvx` runs the latest version of a tool in an isolated cache, outside the virtual environment.
-This keeps the project light and simple, but behavior can change when the tool updates.
-For fully reproducible results, or when you need to use the local `.venv`, use `uv run` instead.
-
-</details>
-
-### 3.3 Build Project Documentation
-
-Make sure you have current doc dependencies, then build your docs, fix any errors, and serve them locally to test.
-
-```shell
-uv run mkdocs build --strict
-uv run mkdocs serve
-```
-
-- After running the serve command, the local URL of the docs will be provided. To open the site, press **CTRL and click** the provided link (at the same time) to view the documentation. On a Mac, use **CMD and click**.
-- Press **CTRL c** (at the same time) to stop the hosting process.
-
-### 3.4 Execute
-
-This project includes demo code.
-Run the demo Python modules to confirm everything is working.
-
-In VS Code terminal, run:
-
-```shell
-uv run python notebooks/project01/ml01.py
-```
-
-A new window with charts should appear. Close the window to finish the execution. 
-If this works, your project is ready! If not, check:
-
-- Are you in the right folder? (All terminal commands are to be run from the root project folder.)
-- Did you run the full `uv sync --extra dev --extra docs --upgrade` command?
-- Are there any error messages? (ask for help with the exact error)
-
-## Update this README as you work
-
-Add commands to run additional scripts as you work through the course (update the path and file name as needed).
-
----
-
-### 3.5 Git add-commit-push to GitHub
-
-Anytime we make working changes to code is a good time to git add-commit-push to GitHub.
-
-1. Stage your changes with git add.
-2. Commit your changes with a useful message in quotes.
-3. Push your work to GitHub.
-
-```shell
-git add .
-git commit -m "describe your change in quotes"
-git push -u origin main
-```
-
-This will trigger the GitHub Actions workflow and publish your documentation via GitHub Pages.
-
-### 3.6 Modify and Debug
-
-With a working version safe in GitHub, start making changes to the code.
-
-Before starting a new session, remember to do a `git pull` and keep your tools updated.
-
-Each time forward progress is made, remember to git add-commit-push.
