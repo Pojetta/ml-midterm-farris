@@ -29,9 +29,7 @@ The dataset is highly separable, allowing Logistic Regression to achieve perfect
 ---
 
 ## 📁 Key Project Files  
-- 📓 **Notebook:** [Midterm Analysis](../notebook/midterm-farris.ipynb)  
 - 🌳 **Decision Tree Visualization:** `notebook/data/pretty_tree.png`  
-- 📝 **Peer Review:** [peer_review.md](../peer_review.md)  
 - 📊 **About the Dataset:** [about_dataset.md](about_dataset.md)
 
 ---

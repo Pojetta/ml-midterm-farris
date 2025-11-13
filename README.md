@@ -42,8 +42,15 @@ The goal of this analysis was to explore the data, visualize feature distributio
 - **Histograms** and **boxplots** showed that all four features vary meaningfully between authentic and forged notes.  
 - **Skewness** and **kurtosis** in particular exhibit clear separation patterns between classes.  
 - No anomalies or missing values were detected, and no preprocessing beyond visualization was required.  
-- The balanced target distribution supports strong model training without adjustments.
+- The balanced target distribution supports strong model training without adjustments.  
+  
+### Histograms
 
+![Histograms](image.png) 
+
+### Boxen Plots
+
+![Boxen Plots](image-1.png)
 ---
 
 ## Modeling and Evaluation  
