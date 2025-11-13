@@ -5,10 +5,6 @@
 ## Project Overview  
 This project applies **machine learning classification techniques** to determine whether a banknote is **authentic or forged** using features extracted from scanned images.  
 
-📄 **Project Files:**  
-- 👉 [Midterm Notebook](notebook/midterm-farris.ipynb)  
-- 👉 [Peer Review](peer_review.md)
-
 The dataset used is the **UCI Banknote Authentication Dataset**, where each banknote image was transformed with a **wavelet transform**, and four statistical measures were computed:  
 - **Variance**  
 - **Skewness**  
