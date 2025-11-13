@@ -17,3 +17,14 @@ edge [fontname="helvetica"] ;
 
 ![Decision Tree](docs/midterm/pretty_tree.png)
 
+fdeaf1
+c2a51a
+ba9e00
+ee7e98
+
+#ba9e00
+#ee7e98
+#fdeaf1
+#e7d198
+#cbae1bff
+#f2a8b9

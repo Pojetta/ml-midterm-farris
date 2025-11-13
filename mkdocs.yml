@@ -25,19 +25,21 @@ theme:
     - content.code.copy # Copy button on code blocks
     - toc.follow # Highlight current section in TOC
 
-  palette:
-    - scheme: default # Light/dark mode toggle
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+ palette:
+  - scheme: default
+    primary: "#ee7e98"      # warm pink
+    accent: "#ba9e00"       # rich yellow-gold
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+
+  - scheme: slate
+    primary: "#cbae1b"      # softer gold for dark backgrounds
+    accent: "#f2a8b9"       # light rosy pink
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+
 
 plugins:
   - search
