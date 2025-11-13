@@ -61,7 +61,8 @@ Two classification models were implemented and compared:
 ### Decision Tree Visualization  
 A fully customized, color-coded decision tree was created for interpretability:
 
-![Decision Tree](notebook/data/pretty_tree.png)
+
+![Decison Tree](pretty_tree.png)
 
 ---
 

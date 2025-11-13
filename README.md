@@ -46,11 +46,11 @@ The goal of this analysis was to explore the data, visualize feature distributio
   
 ### Histograms
 
-![Histograms](image.png) 
+![Histograms](/notebook/data/image.png) 
 
 ### Boxen Plots
 
-![Boxen Plots](image-1.png)
+![Boxen Plots](/notebook/data/image-1.png)
 ---
 
 ## Modeling and Evaluation  
@@ -72,7 +72,7 @@ Two classification models were implemented and compared:
 ### Decision Tree Visualization  
 A fully customized, color-coded decision tree was created for interpretability:
 
-![Decision Tree](notebook/data/pretty_tree.png)
+![Decision Tree](notebook/data/README-TREE.png)
 
 ---
 

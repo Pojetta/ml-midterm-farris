@@ -14,3 +14,6 @@ size="12,6!";
 margin="1,.3";
 node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
 edge [fontname="helvetica"] ;
+
+![Decision Tree](docs/midterm/pretty_tree.png)
+

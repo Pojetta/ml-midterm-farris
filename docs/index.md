@@ -28,12 +28,6 @@ The dataset is highly separable, allowing Logistic Regression to achieve perfect
 
 ---
 
-## 📁 Key Project Files  
-- 🌳 **Decision Tree Visualization:** `notebook/data/pretty_tree.png`  
-- 📊 **About the Dataset:** [about_dataset.md](about_dataset.md)
-
----
-
 ## 🚀 Goal of the Project  
 To demonstrate a complete and interpretable machine learning workflow using a clean, numerical dataset — from feature understanding to model evaluation — with results that clearly show how engineered features can effectively separate classes.
 
