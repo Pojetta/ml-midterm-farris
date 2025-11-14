@@ -27,19 +27,18 @@ theme:
 
   palette:
     - scheme: default
-      primary: "#ee7e98"      # warm pink
-      accent: "#ba9e00"       # rich yellow-gold
+      primary: blue-grey 
+      accent: pink    
       toggle:
-        icon: material/brightness-7
+        icon: material/sleep
         name: Switch to dark mode
 
     - scheme: slate
-      primary: "#cbae1b"      # softer gold for dark backgrounds
-      accent: "#f2a8b9"       # light rosy pink
+      primary: blue-grey      
+      accent: pink       
       toggle:
-        icon: material/brightness-4
+        icon: material/flash-outline
         name: Switch to light mode
-
 
 
 plugins:
