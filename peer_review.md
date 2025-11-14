@@ -1,28 +1,18 @@
-Review one other GitHub repository and provide feedback on:
+# Peer Review: Sabriya Sowers' Mushroom Classification Analysis  
+[Sabriya Sowers – Mushroom Classification Notebook](notebooks/project01/classification_sowers.ipynb)
 
-Clarity & Organization (Is the notebook structured and easy to follow?)
-Feature Selection & Justification (Do the chosen features make sense given the objectives?)
-Model Performance & Comparisons (Are the results and comparisons clearly explained?)
-Reflection Quality (Are insights well thought out?)
-Submission: Submit a short peer review document in your own repository titled peer_review.md.
-The peer review must contain a clickable Markdown link to the notebook (.ipynb) file reviewed along with your personal, well-organized and presented 4-pont review. Provide specifics - both positive and constructive feedback. Suggest improvements where possible and explain why a different choice might be useful as well. Focus on actionable suggestions that the author could realistically implement.  
+## 1. Clarity & Organization  
+The notebook is easy to follow and the section labels make the workflow clear. The short reflection notes after each step were helpful.  
+**Suggestion:** turning the “Reflection X” lines into actual Markdown headings would make them stand out more when scrolling.
 
+## 2. Feature Selection & Justification  
+Your choice to use all encoded features makes sense for this dataset, and you pointed out the ones you expected to matter most (odor, gill_size, spore_print_color).  
+**Suggestion:** the mapping of `class` happens twice, and the `X_all` vs `X` naming got a bit confusing. Cleaning that up would make this section read more smoothly.
 
-1. Immediately, I LOVED the mushroom graphic! Like, possibly more than I should. 
+## 3. Model Performance & Comparisons  
+Both models getting 100% accuracy fits what we expect from this dataset, and you explained the results clearly. The confusion matrices were a nice touch.  
+**Suggestion:** running a quick cross-validation or trying a different train/test split would show whether the perfect accuracy holds beyond the single split.
 
-digraph Tree {
-size="12,6!";
-margin="1,.3";
-node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
-edge [fontname="helvetica"] ;
-
-![Decision Tree](docs/midterm/pretty_tree.png)
-
-
-
-#ba9e00
-#ee7e98
-#fdeaf1
-#e7d198
-#cbae1bff
-#f2a8b9
+## 4. Reflection Quality  
+Your reflections were thoughtful and connected well to the steps you took. I especially liked the notes about handling many one-hot-encoded features.  
+**Suggestion:** adding a sentence about what surprised you the most (about the data or the modeling) would make the reflection feel a bit more personal.
